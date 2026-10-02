@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#8f73ad" />
+    <meta name="description" content="9つの質問で、あなたと彼のツインレイタイプを診断します。" />
+    <title>ツインレイタイプ診断｜あなたと彼は何タイプ？</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✦</text></svg>" />
+    <link rel="preload" as="image" href="assets/cover.webp" />
+    <link rel="preload" as="image" href="assets/background.webp" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="app" aria-live="polite">
+      <section class="screen cover-screen is-active" data-screen="cover" aria-label="診断の表紙">
+        <div class="cover-wrap">
+          <img class="cover-image" src="assets/cover.webp" alt="5万人が受けた ツインレイタイプ診断 あなたと彼は何タイプ？" />
+          <button class="cover-hitarea" type="button" data-action="start" aria-label="診断を受ける"></button>
+        </div>
+      </section>
+
+      <section class="screen story-screen" data-screen="diagnosis" aria-label="ツインレイタイプ診断">
+        <div class="ambient" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="diagnosis-shell">
+          <header class="diagnosis-header">
+            <p class="eyebrow">TWINRAY TYPE DIAGNOSIS</p>
+            <div class="progress-row">
+              <button class="back-button" type="button" data-action="back" aria-label="前の質問へ戻る">‹</button>
+              <p id="progressLabel" class="progress-label">QUESTION 01 / 09</p>
+              <span class="header-spacer" aria-hidden="true"></span>
+            </div>
+            <div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div>
+          </header>
+
+          <div id="stage" class="stage"></div>
+        </div>
+      </section>
+
+      <section class="screen result-screen" data-screen="result" aria-label="診断結果">
+        <div class="result-shell">
+          <p class="result-kicker">YOUR TWINRAY STORY</p>
+          <p id="resultType" class="result-type"></p>
+          <h1 id="resultName" class="result-name"></h1>
+          <div class="result-image-frame">
+            <img id="resultImage" class="result-image" src="" alt="" />
+          </div>
+          <div class="result-copy">
+            <p id="resultLead"></p>
+            <p id="resultBody"></p>
+          </div>
+          <a id="noteCta" class="primary-button result-cta" href="#">自分の詳しい統合ルートを見る <span aria-hidden="true">›</span></a>
+          <button class="text-button" type="button" data-action="restart">もう一度診断する</button>
+          <p class="privacy-note">回答内容はこのページ内でのみ診断に使われます。</p>
+        </div>
+      </section>
+    </main>
+
+    <noscript>この診断にはJavaScriptが必要です。ブラウザの設定からJavaScriptを有効にしてください。</noscript>
+    <script src="app.js" defer></script>
+  </body>
+</html>
